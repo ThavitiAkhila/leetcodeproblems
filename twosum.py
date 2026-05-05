@@ -1,0 +1,12 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        val_indx={}
+        for i,num in enumerate(nums):
+            if target-num in val_indx:
+                return[i,val_indx[target-num]]
+            val_indx[num]=i
